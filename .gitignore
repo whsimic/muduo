@@ -3,6 +3,7 @@ Debug/
 Release/
 .vs/
 .vscode/
+.visualgdb/
 gcc_Debug.h
 gcc_Release.h
 *.vgdbsettings
