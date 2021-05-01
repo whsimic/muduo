@@ -39,5 +39,18 @@ void EchoServer::onMessage(const muduo::net::TcpConnectionPtr& conn,
   LOG_INFO << conn->name() << " echo " << msg.size() << " bytes, "
            << "data received at " << time.toString();
   conn->send(msg);
+
+  LOG_INFO << "msg last one char: " << msg[msg.size()-1];
+  LOG_INFO << "msg last two char: " << msg[msg.size()-2];
+
+  if (msg[msg.size()-2] == '\r')
+  {
+    LOG_INFO << "yes, last two is char \\r";
+  }
+
+  if (msg[msg.size()-1] == '\n')
+  {
+    LOG_INFO << "yes, last one is char \\n";
+  }
 }
 
