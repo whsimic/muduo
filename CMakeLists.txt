@@ -13,6 +13,8 @@ if(CMAKE_PROJECT_NAME STREQUAL "muduo")
   option(MUDUO_BUILD_EXAMPLES "Build Muduo examples" ON)
 endif()
 
+set(CMAKE_CXX_COMPILER "/usr/local/lib/ccache/clang++")
+
 set(CXX_FLAGS
  -g
  # -DVALGRIND
@@ -50,6 +52,7 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
 
+set(BOOST_ROOT /usr)
 find_package(Boost REQUIRED)
 find_package(Protobuf)
 find_package(CURL)
