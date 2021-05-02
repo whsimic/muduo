@@ -18,7 +18,7 @@ mkdir -p $BUILD_DIR/$BUILD_TYPE \
            -DCMAKE_INSTALL_PREFIX=$INSTALL_DIR/$BUILD_TYPE \
            -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
            $SOURCE_DIR \
-  && make $*
+  && make -j4 $*
 
 # Use the following command to run all the unit tests
 # at the dir $BUILD_DIR/$BUILD_TYPE :

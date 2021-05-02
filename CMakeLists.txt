@@ -18,6 +18,7 @@ set(CMAKE_CXX_COMPILER "/usr/local/lib/ccache/clang++")
 set(CXX_FLAGS
  -g
  # -DVALGRIND
+ -fno-limit-debug-info
  -DCHECK_PTHREAD_RETURN_VALUE
  -D_FILE_OFFSET_BITS=64
  -Wall
